@@ -6,8 +6,8 @@ spring:
     config:
       server:
         git:
-          uri:
-          searchPatch: config-data
+          uri: https://github.com/Rodrigomonsalve/cloud.git
+          searchPath: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}
 
