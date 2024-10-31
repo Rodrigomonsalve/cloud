@@ -1,8 +1,8 @@
 package academy.digitalla.store.shopping_service.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import jakarta.persistence.*;
-import jakarta.validation.Valid;
+import javax.persistence.*;
+import javax.validation.Valid;
 import lombok.Data;
 
 //import javax.persistence.*;

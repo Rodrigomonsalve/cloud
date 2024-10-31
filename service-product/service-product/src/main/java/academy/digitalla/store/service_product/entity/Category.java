@@ -1,6 +1,6 @@
 package academy.digitalla.store.service_product.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 @Entity

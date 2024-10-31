@@ -1,6 +1,6 @@
 package academy.digitalla.store.customer_service.repository.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 //import javax.persistence.*;

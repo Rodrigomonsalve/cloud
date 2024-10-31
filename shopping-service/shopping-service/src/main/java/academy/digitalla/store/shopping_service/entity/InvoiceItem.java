@@ -1,7 +1,7 @@
 package academy.digitalla.store.shopping_service.entity;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.Positive;
+import javax.persistence.*;
+import javax.validation.constraints.Positive;
 import lombok.Data;
 
 //import javax.persistence.*;
