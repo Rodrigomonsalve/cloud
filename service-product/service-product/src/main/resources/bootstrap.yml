@@ -1,0 +1,62 @@
+#UN ARCHIVO YML TIENE LA MISMA FUCIÓN QUE UN PROPERTIES. SE PUEDEN USAR DE FORMA INDISTINTA. CAMBIA LIGERAMENTE EL FORMATO.
+#ESTAMOS USANDO UN SGBD LLAMADO H2.
+# ES MUY USADO  EN ENTORNOS DE DESARROLLO PARA REALIZAR PRUEBAS
+# GENERA BASES DE DATOS PERO EN MEMORIA. UNA VEZ QUE DEJA DE CORRER LA APLICACIÓN, LA BASE DE DATOS DEJA DE EXISTIR
+# POR ESO NO ES NECESARIO UTILIZAR PUERTOS NI HOSTSNAMES. NO SE CONECTA A NINGUN CLIENTE NI SERVIDOR.
+# DADO QUE LA BD SE CREA CADA QUE LA APLICACION CORRE, ES NECESARIO INCORPORAR LAS QUERIES EN EL CODIGO.
+#server:
+#  port: 8094
+
+
+
+
+
+#spring:
+#  h2:
+#    console:
+#      enabled: true
+
+
+#  datasource:
+#    url: jdbc:h2:mem:productDB;DB_CLOSE_DELAY=1;DB_CLOSE_ON_EXIT=FALSE
+#    driverClassName: org.h2.Driver
+#    platform: h2
+#    username: sa
+#    password:
+
+
+
+
+
+#  jpa:
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: update
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    properties:
+#      hibernate:
+#        show-sql: true
+#       use_sql_comments: false
+#        format_sql: false
+#logging:
+#  pattern:
+#    console: "%d{yyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
+
+spring.config.import: "configserver:http://root:s3cr3t@localhost:8083"
+
+spring:
+  application:
+    name: service-product
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8083
+      user: root
+      password: s3cr3t
+
+
+
+
+
+
+
