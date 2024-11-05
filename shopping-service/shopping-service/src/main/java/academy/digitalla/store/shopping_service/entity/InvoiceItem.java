@@ -2,6 +2,8 @@ package academy.digitalla.store.shopping_service.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
+
+import academy.digitalla.store.shopping_service.model.Product;
 import lombok.Data;
 
 //import javax.persistence.*;
@@ -26,6 +28,10 @@ public class InvoiceItem  {
 
     @Transient
     private Double subTotal;
+
+    @Transient
+    private Product product;
+
 
 
     public Double getSubTotal(){

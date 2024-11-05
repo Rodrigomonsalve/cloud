@@ -7,6 +7,7 @@ spring:
       server:
         git:
           uri: https://github.com/Rodrigomonsalve/cloud.git
+          #NOMBRE DE LA CARPETA EN LA QUE ESTAN LOS ARCHIVOS DE PROPIEDADES DE CADA UNO DE LOS MICROSERVICIOS,QUE DEBE ESTAR EN GITHUB
           searchPaths: config-data
           username: ${GIT_USER}
           password: ${GIT_PASSWORD}

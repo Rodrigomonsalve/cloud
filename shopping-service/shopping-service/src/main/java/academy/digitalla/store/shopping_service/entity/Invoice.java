@@ -1,5 +1,6 @@
 package academy.digitalla.store.shopping_service.entity;
 
+import academy.digitalla.store.shopping_service.model.Customer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -52,5 +53,8 @@ public class Invoice {
     public void prePersist() {
         this.createAt = new Date();
     }
+
+    @Transient
+    private Customer customer;
 
 }

@@ -46,7 +46,9 @@ spring.config.import: "configserver:http://root:s3cr3t@localhost:8083"
 
 spring:
   application:
+    #NOMBRE DEL ARCHIVO DE PROPIEDADES DE ESTE MICROSERVICIO. SE DEBE ENCONNTRAR EN GITHUB(product-service.yml)
     name: product-service
+    #DATOS DE CONEXION AL SERVIDOR CENTRALIZADO
   cloud:
     config:
       enabled: true
