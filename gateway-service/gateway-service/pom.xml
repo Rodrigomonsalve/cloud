@@ -43,7 +43,7 @@
 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<artifactId>spring-cloud-starter-gateway</artifactId><!-- IMPORTANTE PARA QUE SE CONFIGURE ESTE SERVIDOR GATEWAY-->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
