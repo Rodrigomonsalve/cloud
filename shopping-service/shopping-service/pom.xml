@@ -30,6 +30,13 @@
 		<java.version>17</java.version>
 	</properties>
 
+	<!--<repositories>
+		<repository>
+			<id>spring-releases</id>
+			<url>https://repo.spring.io/release</url>
+		</repository>
+	</repositories>-->
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -66,6 +73,7 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId><!-- IMPORTANTE PARA QUE EL BOOTSTRAP.YML PUEDE LEER LAS PROPIEDADES DEL SERVIDOR CENTRALIZADO.  NO SE NECESITA EN EL POM SERVIDOR CENTRALIZADO-->
 		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

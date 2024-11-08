@@ -66,7 +66,7 @@ public class InvoiceRest {
     public ResponseEntity<?> updateInvoice(@PathVariable("id") long id, @RequestBody Invoice invoice) {
         log.info("Updating Invoice with id {}", id);
 
-        invoice.setId(id);
+        invoice.setInvoice_id(id);
         Invoice currentInvoice=invoiceService.updateInvoice(invoice);
 
         if (currentInvoice == null) {

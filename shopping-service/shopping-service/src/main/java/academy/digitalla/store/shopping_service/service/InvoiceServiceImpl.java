@@ -62,7 +62,7 @@ public class InvoiceServiceImpl implements InvoiceService {
 
         invoiceDB=invoiceRepository.save(invoice);
 
-        invoiceDB.getItems().forEach(invoiceItem -> {
+        invoiceDB.getItems().forEach(invoiceItem -> {//????  Y FOREACH
 
             productClient.updateStockProduct(invoiceItem.getProductId(),  invoiceItem.getQuantity() *-1);
 
@@ -74,7 +74,7 @@ public class InvoiceServiceImpl implements InvoiceService {
 
     @Override
     public Invoice updateInvoice(Invoice invoice) {
-        Invoice invoiceDB = getInvoice(invoice.getId());
+        Invoice invoiceDB = getInvoice(invoice.getInvoice_id());
         if (invoiceDB == null){
             return  null;
         }
@@ -89,7 +89,7 @@ public class InvoiceServiceImpl implements InvoiceService {
 
     @Override
     public Invoice deleteInvoice(Invoice invoice) {
-        Invoice invoiceDB = getInvoice(invoice.getId());
+        Invoice invoiceDB = getInvoice(invoice.getInvoice_id());
         if (invoiceDB == null){
             return  null;
         }
@@ -108,17 +108,17 @@ public class InvoiceServiceImpl implements InvoiceService {
         Invoice invoice=invoiceRepository.findById(id).orElse(null);
         if(null != invoice){
 
-            Customer customer = customerClient.getCustomer(invoice.getCustomerId()).getBody();
+            Customer customer = customerClient.getCustomer(invoice.getCustomerId()).getBody(); //AQUI ESTOY COMUICANDOME CON OTRO MICROSERVICIO (CUSTOMER-SERVICE).
             invoice.setCustomer(customer);
 
-            List<InvoiceItem> listItem=invoice.getItems().stream().map(invoiceItem -> {
+            List<InvoiceItem> listItem=invoice.getItems().stream().map(invoiceItem -> {//?????
 
                 Product product=productClient.getProduct(invoiceItem.getProductId()).getBody();
                 invoiceItem.setProduct(product);
-                return invoiceItem;
+                return invoiceItem;//POR QUE RETURN?
 
-            }).collect(Collectors.toList());
-            invoice.setItems(listItem);
+            }).collect(Collectors.toList());//?????
+            invoice.setItems(listItem);//?????
         }
         return invoice;
     }
