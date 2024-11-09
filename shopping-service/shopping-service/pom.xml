@@ -74,6 +74,10 @@
 			<artifactId>spring-cloud-starter-config</artifactId><!-- IMPORTANTE PARA QUE EL BOOTSTRAP.YML PUEDE LEER LAS PROPIEDADES DEL SERVIDOR CENTRALIZADO.  NO SE NECESITA EN EL POM SERVIDOR CENTRALIZADO-->
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

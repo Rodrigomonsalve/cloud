@@ -44,10 +44,10 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>-->
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId><!--YA TRAE LA LIRERIA DE JACKSON QUE, HAY QUE RECORDAR, NOS AYUDA A SERAILIZAR Y DESERIALIZAR OBJETOS JAVA-->
