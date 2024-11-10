@@ -46,6 +46,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8099/eureka/
+      #IMPORTANTE PARA QUE ACTUATOR PUEDA VISUALIZAR TODOS LOS ENDPOINTS:
 management:
   endpoints:
     web:

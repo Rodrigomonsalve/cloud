@@ -55,7 +55,7 @@
 
 		<dependency>
 			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<artifactId>spring-boot-admin-starter-client</artifactId>!-- IMPORTANTE PARA ESTE MICROSERVICIO SE PUEDA CONECTAR AL SERVIDOR ADMIN-->
 			<version>2.7.15</version>
 		</dependency>
 
