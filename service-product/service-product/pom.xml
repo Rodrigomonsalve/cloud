@@ -71,6 +71,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId><!-- IMPORTANTE PARA PODER INDICAR QUE ES UN CLIENTE DEL SERVIDOR EUREKA.-->
 		</dependency>
+
+
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-sleuth</artifactId>
+    </dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId><!--IMPORTANTE PARA REALIZAR LAS VALIDACIONES (@NotEmpty)-->
