@@ -18,8 +18,12 @@ spring:
       uri: http://localhost:8083
       user: root
       password: s3cr3t
-boot:
-  admin:
-    client:
-      url: http://localhost:8089
+  boot:
+    admin:
+      client:
+        url: http://localhost:8089
+        #LO SIGUIENTE ES UTIL PARA INNDICAR QUE ESTE MICROSERVICIO DEBE USAR SU DIRECCION IP EN LUGAR DE SU NOMBRE DE HOST (HOSTNAME DEL SERVIDOR O DE LA MAQUINA WINDOWS)
+        # PARA REGISTRARSE EN EL SERVIDOR ADMIN. DE LO CONTRARIO NO COINCIDIRÁ CON LA DIRECCION REGISTRADA EN EUREKA, Y APARECERÁ COMO MICROSERVICIO REGISTRADO PERO CAIDO.
+        instance:
+          prefer-ip: true
 
